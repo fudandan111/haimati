@@ -1,16 +1,23 @@
-// 引入路由和vue
-import Vue from 'vue';
-import Router from 'vue-router';
-// 引入页面
-import Home from '@v/Home';
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from './views/Home.vue'
 
-// 安装
-Vue.use(Router);
+Vue.use(Router)
 
-// 定义路由规则
-let routes = [
-
-]
-
-// 实例化
-export default new Router({ routes });
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/about',
+      name: 'about',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    }
+  ]
+})

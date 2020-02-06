@@ -1,24 +1,16 @@
-// 引入vue
-import Vue from 'vue';
-// 引入store
-import Vuex, { Store } from 'vuex';
-// 引入axios
-import axios from 'axios';
-// 安装
-Vue.use(Vuex);
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-// 创建store
-export default new Store ({
-    // 数据
-    state: {
+Vue.use(Vuex)
 
-    },
-    // 同步消息
-    mutations: {
+export default new Vuex.Store({
+  state: {
 
-    },
-    // 定义异步消息
-    actions: {
+  },
+  mutations: {
 
-    }
+  },
+  actions: {
+
+  }
 })

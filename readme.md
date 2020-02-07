@@ -24,7 +24,7 @@ npm run serve
 
 ## 效果图
 
-<img src="C:\Users\付丹丹\Desktop\vue\haimati\designImage\home.png" alt="首页效果图" style="zoom:25%;" />
+<img src="https://github.com/fudandan111/haimati/blob/master/designImage/home.png" alt="首页效果图" style="zoom:25%;" />
 
 <img src="C:\Users\付丹丹\Desktop\vue\haimati\designImage\introduce.png" alt="品牌介绍" style="zoom:25%;" />
 

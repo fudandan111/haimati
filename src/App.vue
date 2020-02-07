@@ -10,6 +10,34 @@
 			</div>
 		</div>
 		<router-view/>
+		<div class="bottom">
+			<img src="../public/img/ico.png">
+			<div class="connect">
+				<ul>
+					<li>企业连接</li>
+					<li>缦图集团官网</li>
+					<li>海马体企业</li>
+					<li>西湖.缦图</li>
+					<li>缦图莱思学院</li>
+				</ul>
+			</div>
+			<div class="hotcity">
+				<ul>
+					<li>成都&nbsp;&nbsp;&nbsp;&nbsp;上海</li>
+					<li>北京&nbsp;&nbsp;&nbsp;&nbsp;武汉</li>
+					<li>重庆&nbsp;&nbsp;&nbsp;&nbsp;南京</li>
+					<li>杭州&nbsp;&nbsp;&nbsp;&nbsp;深圳</li>
+				</ul>
+			</div>
+			<div class="aboutHIMO">
+				<ul>
+					<li>常见问题</li>
+					<li>门店信息</li>
+					<li>企业合作</li>
+					<li>人才招聘</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </template>
 <style lang="scss">
@@ -45,6 +73,10 @@ body {
 				text-decoration: none;
 			}
 		}
+	}
+	.bottom {
+		border-top: solid 1px #E3E3E6;
+		background: #fff;
 	}
 }
 </style>

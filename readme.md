@@ -26,8 +26,8 @@ npm run serve
 
 <img src="https://github.com/fudandan111/haimati/blob/master/designImage/home.png" alt="首页效果图" style="zoom:25%;" />
 
-<img src="C:\Users\付丹丹\Desktop\vue\haimati\designImage\introduce.png" alt="品牌介绍" style="zoom:25%;" />
+<img src="https://github.com/fudandan111/haimati/blob/master/designImage/introduce.png" alt="品牌介绍" style="zoom:25%;" />
 
-<img src="C:\Users\付丹丹\Desktop\vue\haimati\designImage\info.png" alt="门店信息" style="zoom:25%;" />
+<img src="https://github.com/fudandan111/haimati/blob/master/designImage/info.png" alt="门店信息" style="zoom:25%;" />
 
-<img src="C:\Users\付丹丹\Desktop\vue\haimati\designImage\cooperation.png" alt="企业合作" style="zoom:25%;" />
+<img src="https://github.com/fudandan111/haimati/blob/master/designImage/cooperation.png" alt="企业合作" style="zoom:25%;" />

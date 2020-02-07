@@ -33,3 +33,5 @@ npm run serve
 <img src="C:\Users\付丹丹\Desktop\vue\haimati\designImage\cooperation.png" alt="企业合作" style="zoom:25%;" />
 
 <img src="./designImage/home.png" alt="首页" style="zoom:25%;"/>
+
+<img src="/designImage/home.png" alt="首页" style="zoom:25%;" />

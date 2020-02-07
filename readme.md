@@ -28,5 +28,7 @@ npm run serve
 
 ![品牌介绍](./designImage/introduce.png)
 
-![品牌介绍](./designImage/info.png)![品牌介绍](./designImage/cooperation.png)
+![门店信息](./designImage/info.png)
+
+![企业合作](./designImage/cooperation.png)
 

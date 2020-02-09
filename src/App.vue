@@ -3,7 +3,7 @@
 		<div class="header">
 			<img src="../public/img/logo.png" alt="">
 			<div id="nav">
-				<router-link to="/" class="red">首页</router-link> |
+				<router-link to="/">首页</router-link> |
 				<router-link to="/introduce">品牌介绍</router-link> |
 				<router-link to="/info">门店信息</router-link> |
 				<router-link to="/Cooperation">企业合作</router-link> |

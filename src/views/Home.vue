@@ -34,25 +34,72 @@
 				</div>
 				<div class="slideimgs">
 					<div class="classify">
-						<li href="#">精致证件照</li> |
-						<li href="#">文艺照</li> |
-						<li href="#">花颜照</li> |
-						<li href="#">轻婚纱</li>
+						<li href="#" :class="newProductCurrentIndex == 0 ? 'blue' : ''" @click="changenewProductCurrentIndex(0)">精致证件照</li> |
+						<li href="#" :class="newProductCurrentIndex == 1 ? 'blue' : ''" @click="changenewProductCurrentIndex(1)">文艺照</li> |
+						<li href="#" :class="newProductCurrentIndex == 2 ? 'blue' : ''" @click="changenewProductCurrentIndex(2)">花颜照</li> |
+						<li href="#" :class="newProductCurrentIndex == 3 ? 'blue' : ''" @click="changenewProductCurrentIndex(3)">轻婚纱</li>
 					</div>
 					<div class="imgs">
-						<p>&lt;</p>
+						<p @click="left">&lt;</p>
 						<div class="img">
-							<ul>
+							<transition-group tag="ul">
 								<li v-for="(item, index) in newProductImgArray" :key="index">
-									<img id="banner_img" :src="item" />
+									<img id="banner_img" :src="newProductImgArray[newProductCurrentIndex]" />
 								</li>
-							</ul>
+							</transition-group>
 						</div>
-						<p>&gt;</p>
+						<p @click="right">&gt;</p>
+					</div>
+				</div>
+				<h2>精致证件照</h2>
+				<p class="text">一张精致的证件照，能让你的生活焕然一新，能为你的生活带来意想不到的改变</p>
+				<div class="detail">查看详情</div>
+			</div>
+			<!-- 预约流程 -->
+			<div class="appointment">
+				<div class="title">
+					<h2>预约流程</h2>
+					<div class="line">
+						<hr/>
+						<span>生活需要仪式感</span>
+						<hr/>
+					</div>
+					<div class="circle">
+						<p class="yellow"></p>
+						<p class="blue"></p>
+					</div>
+				</div>
+				<div class="appointmentimgs">
+					<div v-for="(item, index) in appointmentimgs" :key="index">
+						<img :src="item" alt="">
+					</div>
+				</div>
+				<div class="steps">
+					<div class="step1">
+						<h3>step1</h3>
+						<h2>关注海马体</h2>
+						<p>关注海马体公众号了解最近上新产品</p>
+					</div>
+					<hr/>
+					<div class="step2">
+						<h3>step2</h3>
+						<h2>选择门店</h2>
+						<p>选择离您最近的门店进行拍摄</p>
+					</div>
+					<hr/>
+					<div class="step3">
+						<h3>step3</h3>
+						<h2>预约时间</h2>
+						<p>提前预约避免错过重要时刻</p>
+					</div>
+					<hr/>
+					<div class="step4">
+						<h3>step4</h3>
+						<h2>确定下单</h2>
+						<p>下单后期待最美的自己</p>
 					</div>
 				</div>
 			</div>
-			<!-- 预约流程 -->
 			<!-- HIMO标准服务 -->
 			<!-- 精选产品 -->
 		</div>
@@ -152,6 +199,10 @@
 				justify-content: space-between;
 				margin: 20px auto;
 				color: #45454D;
+				font-weight: bold;
+				.blue {
+					color: #1769FF;
+				}
 			}
 			.imgs {
 				display: flex;
@@ -184,25 +235,136 @@
 				}
 			}
 		}
+		h2, p.text, div.detail {
+			text-align: center;
+		}
+		p.text {
+			margin: 20px;
+			font-size: 14px;
+			color: #919199;
+		}
+		div.detail {
+			width: 350px;
+			height: 50px;
+			border: solid 1px #1769FF;
+			border-radius: 30px;
+			margin: 40px auto;
+			line-height: 50px;
+			color: #1769FF;
+			&:hover {
+				color: white;
+				background-color: #1769FF;
+			}
+		}
 	}
+	.appointment {
+		.title {
+			text-align: center;
+			padding-top: 80px; 
+			.line {
+				display: flex;
+				justify-content: space-between;
+				hr {
+					width: 350px;
+					border-style: none;
+					border-top: solid 1px rgb(161, 160, 160);
+					margin-top: 10px; 
+				}
+				span {
+					color: #919199;
+				}
+			}
+			.circle {
+				width: 34px;
+				display: flex;
+				margin: 10px auto;
+				p {
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+				}
+				.yellow {
+					background-color: #FF8F00;
+					margin-right: 4px;
+				}
+				.blue {
+					background-color: #1769FF;
+				}
+			}
+		}
+		.appointmentimgs {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: space-between;
+			div {
+				width: 320px;
+				height: 410px;
+				margin: 40px 0 5px;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		.steps {
+			display: flex;
+			justify-content: space-around;
+			padding: 0 43px;
+			margin-bottom: 80px;
+			div	{
+				width: 200px;
+				text-align: center;
+				color: #45454D;
+				h2 {
+					font-size: 20px;
+					font-weight: 500;
+				}
+				p {
+					font-size: 12px;
+					margin-top: 10px;
+					color: #919199;
+				}
+			}
+			hr {
+				width: 90px;
+				border-style: none;
+				border-top: solid 1px rgb(161, 160, 160);
+				margin-top: 20px; 
+			}
+		}
+	}
+
 }
 </style>
 <script>
 export default {
 	data() {
 		return {
-			// 对比图片索引的变量
+			// 轮播图图片索引
 			currentIndex: 0,
+			// 最新产品图片索引
+			newProductCurrentIndex: 0,
+			// 定时器
 			timer: null,
+			// 轮播图图片
 			imgArray: [
 				'/img/banner1.jpg',
 				'/img/banner2.jpg',
 			],
+			// 最新产品图片
 			newProductImgArray: [
 				'/img/newproduct1.png',
 				'/img/wenyizhao.png',
 				'/img/huayan.png',
 				'/img/wedding.png'
+			],
+			// 预约流程图片
+			appointmentimgs: [
+				'/img/step1.png',
+				'/img/step2.png',
+				'/img/step3.png',
+				'/img/step4.png'
 			]
 		}
 	},
@@ -236,6 +398,26 @@ export default {
 		// 鼠标离开
 		leave() {
 			this.run();
+		},
+		// 查看最新产品上一个
+		left() {
+			if (this.newProductCurrentIndex == 0) {
+				this.newProductCurrentIndex = this.newProductImgArray.length - 1;
+			} else {
+				this.newProductCurrentIndex--;
+			}
+		},
+		// 查看最新产品下一个
+		right() {
+			if (this.newProductCurrentIndex == this.newProductImgArray.length - 1) {
+				this.newProductCurrentIndex = 0;
+			} else {
+				this.newProductCurrentIndex++;
+			}
+		},
+		// 点击事件改变最新产品的索引值
+		changenewProductCurrentIndex(index) {
+			this.newProductCurrentIndex = index;
 		}
 	},
 	// 组件构建完成

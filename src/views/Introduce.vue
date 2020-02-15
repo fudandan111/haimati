@@ -31,9 +31,14 @@
 		</div>
 		<!-- 介绍部分 -->
 		<div class="inner">
-			<Destript>
-				
-			</Destript>
+			<Destript></Destript>
+			<img src="../../public/img/haimati.png" alt="">
+		</div>
+		<!-- 发展历程 -->
+		<div class="develope">
+			<h1>海马体发展历程</h1>
+			<p>高速发展，把美带向生活每一处细节</p>
+			<Develope></Develope>
 		</div>
 	</div>
 </template>
@@ -96,18 +101,36 @@
 	// 介绍部分
 	.inner {
 		width: 1200px;
-		height: 1000px;
 		margin: 0 auto;
-		background-color: pink;
+		display: flex;
+		img {
+			width: 480px;
+			margin: 70px 0 60px 90px;
+		}
+	}
+	// 发展历程
+	.develope {
+		width: 1000px;
+		height: 1100px;
+		margin: 50px auto;
+		h1 {
+			font-size: 40px;
+			text-align: center;
+		}
+		p {
+			color: gray;
+			margin: 10px 0 100px 0;
+			text-align: center;
+		}
 	}
 }
 </style>
 <script>
 // 引入header
 import Destript from '../components/Destript.vue';
-
+import Develope from '../components/Develope.vue';
 export default {
   // 注册组件
-  components: { Destript }
+  components: { Destript, Develope }
 }
 </script>
